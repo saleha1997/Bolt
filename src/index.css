@@ -1,0 +1,116 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --theme-bg-gradient: radial-gradient(circle at 50% 0%, #d1fae5 0%, #e0f2fe 40%, #f3f4f6 100%);
+    --theme-card-bg: rgba(255, 255, 255, 0.72);
+    --theme-card-border: rgba(255, 255, 255, 0.6);
+    --theme-text-main: #134e4a;
+    --theme-text-muted: #4b5563;
+    --theme-accent: #10b981;
+    --theme-accent-hover: #059669;
+    --theme-accent-light: #ecfdf5;
+  }
+
+  /* Midnight Theme */
+  [data-theme="midnight"] {
+    --theme-bg-gradient: radial-gradient(circle at 50% 10%, #132e27 0%, #0c151c 45%, #07090c 100%);
+    --theme-card-bg: rgba(18, 24, 27, 0.78);
+    --theme-card-border: rgba(45, 212, 191, 0.15);
+    --theme-text-main: #f0fdf4;
+    --theme-text-muted: #94a3b8;
+    --theme-accent: #10b981;
+    --theme-accent-hover: #34d399;
+    --theme-accent-light: rgba(16, 185, 129, 0.15);
+  }
+
+  /* Lavender Theme */
+  [data-theme="lavender"] {
+    --theme-bg-gradient: radial-gradient(circle at 50% 10%, #ede9fe 0%, #fae8ff 45%, #f8fafc 100%);
+    --theme-card-bg: rgba(255, 255, 255, 0.75);
+    --theme-card-border: rgba(192, 132, 252, 0.25);
+    --theme-text-main: #4c1d95;
+    --theme-text-muted: #6b7280;
+    --theme-accent: #8b5cf6;
+    --theme-accent-hover: #7c3aed;
+    --theme-accent-light: #f5f3ff;
+  }
+
+  /* Mint Theme (matches user screenshot Screenshot_2026-11-07-15-37-11-725) */
+  [data-theme="mint"] {
+    --theme-bg-gradient: radial-gradient(circle at 50% 0%, #cbf3eb 0%, #d8f5ef 35%, #ebfbf7 70%, #f4fbf9 100%);
+    --theme-card-bg: rgba(246, 253, 250, 0.82);
+    --theme-card-border: rgba(20, 184, 166, 0.2);
+    --theme-text-main: #113832;
+    --theme-text-muted: #4a635d;
+    --theme-accent: #10b981;
+    --theme-accent-hover: #059669;
+    --theme-accent-light: #d1fae5;
+  }
+}
+
+/* Shimmering Metallic Radial Gradient Circle for Voice Mode */
+.metallic-sonic-orb {
+  background: 
+    radial-gradient(circle at 50% 50%, #ffffff 0%, rgba(255,255,255,0.8) 12%, transparent 35%),
+    conic-gradient(
+      from 0deg,
+      #34d399 0deg,
+      #a7f3d0 45deg,
+      #10b981 90deg,
+      #ecfdf5 135deg,
+      #059669 180deg,
+      #a7f3d0 225deg,
+      #10b981 270deg,
+      #f0fdf4 315deg,
+      #34d399 360deg
+    );
+  box-shadow: 
+    0 0 60px rgba(16, 185, 129, 0.4),
+    inset 0 0 40px rgba(255, 255, 255, 0.6);
+}
+
+@keyframes spinSlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spinSlow 20s linear infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.95;
+  }
+  50% {
+    transform: scale(1.06);
+    opacity: 1;
+    box-shadow: 0 0 90px rgba(52, 211, 153, 0.6);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 3s ease-in-out infinite;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.35);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.6);
+}
