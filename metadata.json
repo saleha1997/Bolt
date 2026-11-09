@@ -1,0 +1,9 @@
+{
+  "name": "Bolt - AI Assistant & Universal Agent",
+  "description": "Bolt is an intelligent universal AI assistant with liquid glass UI, auto-routing multi-agent modes (Education, Coding, Build, Device Control, Pro Work), real-time bilingual Bengali/English voice mode, local device storage, custom AI provider slots, and complete APK/EXE native app exporters.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

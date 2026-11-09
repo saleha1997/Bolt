@@ -1,0 +1,9 @@
+{
+  "appId": "com.bolt.app",
+  "appName": "Bolt",
+  "webDir": "dist",
+  "server": {
+    "androidScheme": "https",
+    "cleartext": true
+  }
+}
